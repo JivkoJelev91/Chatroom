@@ -1,3 +1,3 @@
 # Chatroom
 
-# Chatroom is a basic chat application in php. 
+## Chatroom is a basic chat application in php. 
