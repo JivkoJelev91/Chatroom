@@ -1,0 +1,62 @@
+#chatBox{
+	width:60%;
+	height: 450px;
+	text-align:center;
+	background-color:black;
+	margin:0 auto;
+	overflow-y: scroll;
+	font-family:Arial Black;
+	font-size:14px;
+}
+
+.allInfoInChat{
+	display:flex;
+	flex-wrap:wrap;
+	width:80%;
+	padding-right:12%;
+}
+
+.time{
+	color:green;
+	margin-right:0;
+}
+
+.allData{
+	display:flex;
+	flex-wrap:no-wrap;
+	padding-left:15px;
+	padding-right:15px;
+}
+#chatDsiplay{
+	overflow-y: scroll;
+}
+
+#myChatForm{
+	text-align:center;
+}
+
+input{
+	width:60%;
+}
+
+#message{
+	height:30px;
+}
+
+.messagesInChat{
+	word-break:break-all;
+	text-align:left;	
+	
+	
+}
+.nameInChat{
+	
+	text-align:left;
+}
+
+
+#sendMessageButton{
+	width:60%;
+	background-color:lightgreen;
+	height:30px;
+}
