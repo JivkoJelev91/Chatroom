@@ -11,7 +11,7 @@
   
   <script>
 	$(document).ready(function(e){
-		
+	
 		function displayChat(){	
 			$.ajax({
 				url: 'displayChat.php',
@@ -29,7 +29,9 @@
 			$("#chatBox").animate({ scrollTop: $(document).height() }, "slow");
 			var name = $("#user_name").val();
 			var message = $("#message").val();
+
 			$('#myChatForm')[0].reset();
+
 			e.preventDefault();
 		
 			$.ajax({
@@ -41,8 +43,7 @@
 				}
 			});
 		});
-
-		
+					
 	});
   </script>
 
@@ -50,16 +51,19 @@
 <body>
 
 <div class="container">
+	<div class="header">
+		
+	</div>
 	<div class="well" id="chatBox">
 		<h3 style="color:white;">Mirc is back OR JIRC</h3>
 		<div id="chatDisplay"></div>
 	</div>
-	<form id="myChatForm" method="POST">
+	<form id="myChatForm" method="POST" >
 		<input  type="text" name="name" id="user_name" placeholder="Enter your name!" ><br />
-		<input type="text" name="message" id="message" placeholder="Enter your message here!"><br />
-		<button  type="submit" id="sendMessageButton">Send Message</button>
+		<input type="text" name="message" id="message" placeholder="Enter your message here!">
+		<button  type="submit" id="sendMessageButton">Send</button>
 	</form>
 </div>
-	
+
 </body>
 </html>

@@ -1,5 +1,20 @@
-#chatBox{
+.container{
+	
+  border: 1px solid white; 
+  outline: 3px solid gray;
 	width:60%;
+	margin:0 auto;
+}
+
+.header{
+	width:100%;
+	background-color:#E0DDE3;
+	height:40px;
+	margin:0 auto;
+}
+
+#chatBox{
+	width:100%;
 	height: 450px;
 	text-align:center;
 	background-color:black;
@@ -12,8 +27,9 @@
 .allInfoInChat{
 	display:flex;
 	flex-wrap:wrap;
-	width:80%;
+	width:100%;
 	padding-right:12%;
+	margin-bottom:3px;
 }
 
 .time{
@@ -27,36 +43,31 @@
 	padding-left:15px;
 	padding-right:15px;
 }
-#chatDsiplay{
-	overflow-y: scroll;
-}
 
 #myChatForm{
 	text-align:center;
 }
 
-input{
-	width:60%;
+#user_name{
+	width:99.5%;
 }
 
 #message{
 	height:30px;
+	width:91%;
 }
 
 .messagesInChat{
 	word-break:break-all;
 	text-align:left;	
-	
-	
+	padding-left:6px;
 }
 .nameInChat{
-	
 	text-align:left;
 }
 
-
 #sendMessageButton{
-	width:60%;
+	width:64px;
 	background-color:lightgreen;
 	height:30px;
 }
