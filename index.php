@@ -11,7 +11,30 @@
   
   <script>
 	$(document).ready(function(e){
-	
+		$('#sendMessageButton').click(function(e){
+			
+			$("#chatBox").animate({ scrollTop: $(document).height() }, "slow");
+			var name = $("#user_name").val();
+			var message = $("#message").val();
+			if(name == ''){
+				alert('Name is required');
+				e.preventDefault();
+				return;
+			}
+			
+			$('#myChatForm')[0].reset();
+			e.preventDefault();
+		
+			$.ajax({
+				url: 'sendChat.php',
+				type: 'POST',
+				data: {
+					uname: name,
+					umessage: message,
+				}
+			});
+		});		
+		
 		function displayChat(){	
 			$.ajax({
 				url: 'displayChat.php',
@@ -22,29 +45,7 @@
 			});
 		}
 		setInterval(function() { displayChat();}, 500);
-		
-
-		
-		$('#sendMessageButton').click(function(e){
-			$("#chatBox").animate({ scrollTop: $(document).height() }, "slow");
-			var name = $("#user_name").val();
-			var message = $("#message").val();
-
-			$('#myChatForm')[0].reset();
-
-			e.preventDefault();
-		
-			$.ajax({
-				url: 'sendChat.php',
-				type: 'POST',
-				data: {
-					uname: name,
-					umessage: message
-				}
-			});
-		});
-					
-	});
+	 });
   </script>
 
 </head>

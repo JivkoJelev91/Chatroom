@@ -26,23 +26,18 @@
 
 .allInfoInChat{
 	display:flex;
-	flex-wrap:wrap;
-	width:100%;
-	padding-right:12%;
-	margin-bottom:3px;
 }
 
+.nameInChat{
+	padding:0 5px;
+}
 .time{
 	color:green;
-	margin-right:0;
+	text-align:left;
+	margin-left:5px;
 }
 
-.allData{
-	display:flex;
-	flex-wrap:no-wrap;
-	padding-left:15px;
-	padding-right:15px;
-}
+
 
 #myChatForm{
 	text-align:center;
@@ -68,6 +63,7 @@
 
 #sendMessageButton{
 	width:64px;
-	background-color:lightgreen;
+	background-color:lightgray;
+	color:blue;
 	height:30px;
 }

@@ -7,17 +7,16 @@
 	?>
 			<div class="allData">
 			<div class="allInfoInChat">
-			<span class="nameInChat"style="color:red;float:left;"><?php echo "[".$row['name'] . "]: "; ?> </span>
-			<span class="messagesInChat" style="color: blue;float:left;"><?php echo $row['message'];?></span>
-			<span style="float:right;color:green;">
-			</div>
 			<div class="time">
 			<?php 
 				$timespamp = explode(" ", $row['time']);
 				list($hour,$min) = explode(':', $timespamp[1]);
-				echo $hour.":".$min; 
+				echo "[".$hour.":".$min."]"; 
 			?>
-			</span>
+			</div>
+			<div class="nameInChat"style="color:red;"><?php echo '***'.$row['name'] . ":"; ?> </div>
+			<div class="messagesInChat" style="color: blue;;"><?php echo $row['message'];?></div>
+			
 			</div>
 			</div>
 		
