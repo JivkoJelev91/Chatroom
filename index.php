@@ -26,6 +26,7 @@
 
 		
 		$('#sendMessageButton').click(function(e){
+			$("#chatBox").animate({ scrollTop: $(document).height() }, "slow");
 			var name = $("#user_name").val();
 			var message = $("#message").val();
 			$('#myChatForm')[0].reset();
